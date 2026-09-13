@@ -2,7 +2,7 @@ name: status-page
 
 on:
   push:
-    branches: [master]
+    branches: [main]
     paths:
       - "status-page/**"
       - ".github/workflows/status-pages.yml"
