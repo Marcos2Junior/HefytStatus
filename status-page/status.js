@@ -21,7 +21,7 @@
       if (pending || now - lastAttemptAt < options.minimumRetryMs) return false;
       pending = true;
       lastAttemptAt = now;
-      options.onPending(true);
+      if (options.onPending) options.onPending(true);
       const controller = new options.AbortController();
       const timeout = options.setTimeout(() => controller.abort(), options.timeoutMs);
       try {
@@ -32,7 +32,7 @@
       } finally {
         options.clearTimeout(timeout);
         pending = false;
-        options.onPending(false);
+        if (options.onPending) options.onPending(false);
         schedule();
       }
       return true;
