@@ -58,13 +58,18 @@
     let monitor;
 
     function translatedStatus() { return root.dataset[`status${currentState[0].toUpperCase()}${currentState.slice(1)}${suffixForLocale(locale)}`]; }
+    function translatedComponentStatus() {
+      return currentState === "unknown"
+        ? root.dataset[`componentUnknown${suffixForLocale(locale)}`]
+        : translatedStatus();
+    }
     function render() {
       document.documentElement.lang = locale;
       document.querySelectorAll("[data-i18n]").forEach(element => { element.textContent = element.dataset[keyForLocale(locale)]; });
       document.querySelectorAll("[data-i18n-aria-label]").forEach(element => { element.setAttribute("aria-label", element.dataset[keyForLocale(locale)]); });
       document.querySelectorAll("[data-language]").forEach(button => { button.setAttribute("aria-pressed", String(button.dataset.language === locale)); });
       statusHeading.textContent = translatedStatus();
-      componentStatus.textContent = translatedStatus();
+      componentStatus.textContent = translatedComponentStatus();
       statusMessage.textContent = statusMessage.dataset[`${currentState}${suffixForLocale(locale)}`];
       monitoringLabel.textContent = root.dataset[`monitoring${suffixForLocale(locale)}`];
       monitoringDetail.textContent = root.dataset[`monitoringDetail${suffixForLocale(locale)}`];
