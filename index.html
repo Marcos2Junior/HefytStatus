@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Acompanhe em tempo real a disponibilidade da plataforma Hefyt.">
+  <title>Status da Hefyt</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page"
+        data-status-url="https://hefyt.com/health"
+        data-status-checking-pt-br="Verificando..."
+        data-status-checking-es-es="Verificando..."
+        data-status-checking-en-us="Checking..."
+        data-status-operational-pt-br="Operacional"
+        data-status-operational-es-es="Operativa"
+        data-status-operational-en-us="Operational"
+        data-status-degraded-pt-br="Instabilidade"
+        data-status-degraded-es-es="Inestabilidad"
+        data-status-degraded-en-us="Degraded performance"
+        data-status-unavailable-pt-br="Indisponível"
+        data-status-unavailable-es-es="No disponible"
+        data-status-unavailable-en-us="Unavailable">
+    <header class="header">
+      <a class="brand" href="https://hefyt.com" aria-label="Hefyt">Hefyt</a>
+      <nav class="languages" aria-label="Idioma" data-i18n-aria-label data-pt-br="Idioma" data-es-es="Idioma" data-en-us="Language">
+        <button type="button" data-language="pt-BR" aria-pressed="true">Português</button>
+        <button type="button" data-language="es-ES" aria-pressed="false">Español</button>
+        <button type="button" data-language="en-US" aria-pressed="false">English</button>
+      </nav>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow"
+         data-i18n data-pt-br="Disponibilidade em tempo real" data-es-es="Disponibilidad en tiempo real" data-en-us="Real-time availability">Disponibilidade em tempo real</p>
+      <h1 data-i18n data-pt-br="Status da Hefyt" data-es-es="Estado de Hefyt" data-en-us="Hefyt status">Status da Hefyt</h1>
+      <p data-i18n
+         data-pt-br="Esta página acompanha a disponibilidade atual dos serviços da Hefyt."
+         data-es-es="Esta página muestra la disponibilidad actual de los servicios de Hefyt."
+         data-en-us="This page shows the current availability of Hefyt services.">Esta página acompanha a disponibilidade atual dos serviços da Hefyt.</p>
+    </section>
+
+    <section class="status-card" data-state="checking" aria-labelledby="platform-title">
+      <div class="status-summary">
+        <span class="indicator" aria-hidden="true"></span>
+        <div>
+          <p class="status-label" data-status-label aria-live="polite">Verificando...</p>
+          <p class="status-note" data-i18n
+             data-pt-br="Estado geral neste momento"
+             data-es-es="Estado general en este momento"
+             data-en-us="Overall status right now">Estado geral neste momento</p>
+        </div>
+      </div>
+      <div class="component">
+        <h2 id="platform-title" data-i18n data-pt-br="Plataforma Hefyt" data-es-es="Plataforma Hefyt" data-en-us="Hefyt platform">Plataforma Hefyt</h2>
+        <span class="component-status" data-component-status>Verificando...</span>
+      </div>
+      <p class="last-check">
+        <span data-i18n data-pt-br="Última verificação:" data-es-es="Última verificación:" data-en-us="Last checked:">Última verificação:</span>
+        <time data-last-check aria-live="polite">-</time>
+      </p>
+    </section>
+  </main>
+  <script src="status.js"></script>
+</body>
+</html>
