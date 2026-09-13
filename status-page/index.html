@@ -15,12 +15,8 @@
         data-status-operational-pt-br="Operacional" data-status-operational-es-es="Operativa" data-status-operational-en-us="Operational"
         data-status-unavailable-pt-br="Indisponível" data-status-unavailable-es-es="No disponible" data-status-unavailable-en-us="Unavailable"
         data-status-unknown-pt-br="Não foi possível verificar" data-status-unknown-es-es="No se pudo verificar" data-status-unknown-en-us="Unable to verify"
-        data-relative-now-pt-br="agora" data-relative-now-es-es="ahora" data-relative-now-en-us="just now"
-        data-relative-seconds-pt-br="há {value} segundos" data-relative-seconds-es-es="hace {value} segundos" data-relative-seconds-en-us="{value} seconds ago"
-        data-relative-minute-pt-br="há 1 minuto" data-relative-minute-es-es="hace 1 minuto" data-relative-minute-en-us="1 minute ago"
-        data-relative-minutes-pt-br="há {value} minutos" data-relative-minutes-es-es="hace {value} minutos" data-relative-minutes-en-us="{value} minutes ago"
-        data-next-seconds-pt-br="em {value} segundos" data-next-seconds-es-es="en {value} segundos" data-next-seconds-en-us="in {value} seconds"
-        data-next-minute-pt-br="em 1 minuto" data-next-minute-es-es="en 1 minuto" data-next-minute-en-us="in 1 minute">
+        data-monitoring-pt-br="Verificando em tempo real" data-monitoring-es-es="Verificando en tiempo real" data-monitoring-en-us="Checking in real time"
+        data-monitoring-detail-pt-br="Atualização automática a cada 30 segundos." data-monitoring-detail-es-es="Actualización automática cada 30 segundos." data-monitoring-detail-en-us="Automatic updates every 30 seconds.">
     <header class="header">
       <a class="brand" href="https://hefyt.com" aria-label="Hefyt">Hefyt</a>
       <nav class="languages" aria-label="Idioma" data-i18n-aria-label data-pt-br="Idioma" data-es-es="Idioma" data-en-us="Language">
@@ -60,7 +56,7 @@
       <div class="service-row">
         <div>
           <h3 data-i18n data-pt-br="Plataforma Hefyt" data-es-es="Plataforma Hefyt" data-en-us="Hefyt platform">Plataforma Hefyt</h3>
-          <p data-i18n data-pt-br="Cardápios, pedidos e operação da casa" data-es-es="Menús, pedidos y operación del restaurante" data-en-us="Menus, orders, and restaurant operations">Cardápios, pedidos e operação da casa</p>
+          <p data-i18n data-pt-br="Disponibilidade geral da aplicação Hefyt" data-es-es="Disponibilidad general de la aplicación Hefyt" data-en-us="Overall availability of the Hefyt application">Disponibilidade geral da aplicação Hefyt</p>
         </div>
         <span class="service-status"><i aria-hidden="true"></i><span data-component-status>Verificando...</span></span>
       </div>
@@ -69,13 +65,9 @@
     <section class="monitoring" aria-labelledby="monitoring-title">
       <div>
         <h2 id="monitoring-title" data-i18n data-pt-br="Como monitoramos a Hefyt" data-es-es="Cómo monitoreamos Hefyt" data-en-us="How we monitor Hefyt">Como monitoramos a Hefyt</h2>
-        <p data-i18n data-pt-br="Esta página independente verifica periodicamente se a plataforma está disponível para operar." data-es-es="Esta página independiente verifica periódicamente si la plataforma está disponible para operar." data-en-us="This independent page periodically checks whether the platform is available to operate.">Esta página independente verifica periodicamente se a plataforma está disponível para operar.</p>
+        <p data-i18n data-pt-br="Esta página verifica periodicamente a disponibilidade atual da plataforma Hefyt." data-es-es="Esta página verifica periódicamente la disponibilidad actual de la plataforma Hefyt." data-en-us="This page periodically checks the current availability of the Hefyt platform.">Esta página verifica periodicamente a disponibilidade atual da plataforma Hefyt.</p>
       </div>
-      <dl class="check-times">
-        <div><dt data-i18n data-pt-br="Última verificação" data-es-es="Última verificación" data-en-us="Last checked">Última verificação</dt><dd><time data-last-check>-</time></dd></div>
-        <div><dt data-i18n data-pt-br="Próxima verificação" data-es-es="Próxima verificación" data-en-us="Next check">Próxima verificação</dt><dd><time data-next-check>-</time></dd></div>
-      </dl>
-      <button class="check-button" type="button" data-check-again disabled><span aria-hidden="true">↻</span><span data-i18n data-pt-br="Verificar novamente" data-es-es="Verificar de nuevo" data-en-us="Check again">Verificar novamente</span></button>
+      <div class="monitoring-indicator"><span class="pulse" aria-hidden="true"></span><span data-monitoring-label>Verificando em tempo real</span><small data-monitoring-detail>Atualização automática a cada 30 segundos.</small></div>
     </section>
   </main>
 
